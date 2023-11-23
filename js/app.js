@@ -1,15 +1,24 @@
-var acc = document.getElementsByClassName("accordion");
-var i;
-for (i = 0; i < acc.length; i++) {
-    acc[i].addEventListener("click", function () {
+const input = document.getElementById("input")
+const lbl = document.querySelector(".lbl")
+const kapak = document.querySelectorAll(".accordion-kapak")
+const hide = document.querySelectorAll(".accordion-hide")
 
-        this.classList.toggle("active");
-        var panel = this.nextElementSibling;
-        if (panel.style.display === "block") {
-            panel.style.display = "none";
-        } else {
-            panel.style.display = "block";
+input.addEventListener("focusin", () => {
+    lbl.classList.add("lbl-active")
 
-        }
-    });
-}
+})
+input.addEventListener("focusout", () => {
+    if (input.value == "") {
+        lbl.classList.remove("lbl-active")
+    }
+})
+
+kapak.forEach(title => {
+    title.addEventListener("click", function () {
+        let hide = this.parentElement.children[1]
+        hide.classList.toggle("accordion-show")
+        hide.classList.toggle("p-3")
+        hide.classList.toggle("p-3")
+
+    })
+})

@@ -14,3 +14,33 @@
     url(../img/arkaplan.jpg);
   height: 110vh;
 }
+
+.lbl {
+  left: 10px;
+  top: 12px;
+}
+.for_email {
+  height: 56px;
+  width: 400px;
+}
+.lbl-active {
+  top: 0;
+  left: 3px;
+  font-size: 13px;
+}
+.title {
+  font-size: 3rem;
+  font-weight: bold;
+}
+.cizgi {
+  border: 4px solid rgb(35, 35, 35);
+}
+
+.accordion-hide {
+  height: 0;
+  overflow: hidden;
+  transition: 0.3s;
+}
+.accordion-show {
+  height: 200px;
+}
